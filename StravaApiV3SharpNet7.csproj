@@ -1,0 +1,58 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <RootNamespace>de.schumacher_bw.Strava</RootNamespace>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>1.3.0</Version>
+    <Authors>Simon Schumacher</Authors>
+    <Company />
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageTags />
+    <PackageProjectUrl>https://schumi86.visualstudio.com/StravaApiV3Sharp</PackageProjectUrl>
+    <PackageReleaseNotes>Release 1.3.0 with updated features of the Strava Api:
+* New Enum with more detailed SportTypes named "ActivitySportType" to stay backward compatible since SportType already exists as type in version &lt;1.3.0
+* Kept the old version of Endpoints.Activity.CreateActivity() as obsolete method for backward compitability and since the official documented version does not work</PackageReleaseNotes>
+    <Copyright>Simon Schumacher</Copyright>
+    <Description>A complete and easy to use implementation of the StravaV3Api for .NET</Description>
+    <Configurations>Debug;Release;Debug_CHECK_ALL_ELEMENTS_COVERED</Configurations>
+    <AssemblyVersion>1.3.0.0</AssemblyVersion>
+    <FileVersion>1.3.0.0</FileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>
+    </DocumentationFile>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Release\netstandard2.0\StravaApiV3Sharp.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_CHECK_ALL_ELEMENTS_COVERED|AnyCPU'">
+    <DefineConstants>DEBUG;CHECK_ALL_ELEMENTS_COVERED</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Documentation\**" />
+    <EmbeddedResource Remove="Documentation\**" />
+    <None Remove="Documentation\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Documentation\docfx.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Documentation\api\index.md" />
+    <None Include="Documentation\articles\intro.md" />
+    <None Include="Documentation\articles\toc.yml" />
+    <None Include="Documentation\index.md" />
+    <None Include="Documentation\toc.yml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="RestSharp" Version="110.2.0" />
+    <PackageReference Include="RestSharp.Serializers.NewtonsoftJson" Version="110.2.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Documentation\images\" />
+  </ItemGroup>
+</Project>

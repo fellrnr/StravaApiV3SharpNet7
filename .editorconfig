@@ -1,0 +1,23 @@
+﻿[*.cs]
+
+# IDE0055: Formatierung beheben
+dotnet_diagnostic.IDE0055.severity = none
+
+# CA1819: Eigenschaften dürfen keine Arrays zurückgeben
+#dotnet_diagnostic.CA1819.severity = none
+
+# CA1707: Entfernen sie die Unterstriche uad dem Namespacenamen
+dotnet_diagnostic.CA1707.severity = none
+
+# CA1056: Ändern Sie den Typ der Eigentschaft .Url von Zeichenfolge in System.Uri
+dotnet_diagnostic.CA1056.severity = none
+
+dotnet_diagnostic.CA1031.severity = none
+dotnet_diagnostic.CA1032.severity = none
+dotnet_diagnostic.CA1034.severity = none
+
+dotnet_diagnostic.CA1716.severity = none
+dotnet_diagnostic.CA1724.severity = none
+
+dotnet_diagnostic.CA1825.severity = none
+dotnet_diagnostic.CA1812.severity = none
