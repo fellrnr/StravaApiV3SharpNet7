@@ -9,6 +9,8 @@ namespace de.schumacher_bw.Strava.Model
         AlpineSki,
         [EnumMember(Value = "BackcountrySki")]
         BackcountrySki,
+        [EnumMember(Value = "Badminton")]
+        Badminton,
         [EnumMember(Value = "Canoeing")]
         Canoeing,
         [EnumMember(Value = "Crossfit")]
@@ -25,6 +27,8 @@ namespace de.schumacher_bw.Strava.Model
         GravelRide,
         [EnumMember(Value = "Handcycle")]
         Handcycle,
+        [EnumMember(Value = "HighIntensityIntervalTraining")]
+        HighIntensityIntervalTraining,
         [EnumMember(Value = "Hike")]
         Hike,
         [EnumMember(Value = "IceSkate")]
@@ -39,6 +43,12 @@ namespace de.schumacher_bw.Strava.Model
         MountainBikeRide,
         [EnumMember(Value = "NordicSki")]
         NordicSki,
+        [EnumMember(Value = "Pickleball")]
+        Pickleball,
+        [EnumMember(Value = "Pilates")]
+        Pilates,
+        [EnumMember(Value = "Racquetball")]
+        Racquetball,
         [EnumMember(Value = "Ride")]
         Ride,
         [EnumMember(Value = "RockClimbing")]
@@ -59,6 +69,8 @@ namespace de.schumacher_bw.Strava.Model
         Snowshoe,
         [EnumMember(Value = "Soccer")]
         Soccer,
+        [EnumMember(Value = "Squash")]
+        Squash,
         [EnumMember(Value = "StairStepper")]
         StairStepper,
         [EnumMember(Value = "StandUpPaddling")]
@@ -67,12 +79,18 @@ namespace de.schumacher_bw.Strava.Model
         Surfing,
         [EnumMember(Value = "Swim")]
         Swim,
+        [EnumMember(Value = "TableTennis")]
+        TableTennis,
+        [EnumMember(Value = "Tennis")]
+        Tennis,
         [EnumMember(Value = "TrailRun")]
         TrailRun,
         [EnumMember(Value = "Velomobile")]
         Velomobile,
         [EnumMember(Value = "VirtualRide")]
         VirtualRide,
+        [EnumMember(Value = "VirtualRow")]
+        VirtualRow,
         [EnumMember(Value = "VirtualRun")]
         VirtualRun,
         [EnumMember(Value = "Walk")]
