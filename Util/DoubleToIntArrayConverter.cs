@@ -12,6 +12,8 @@ namespace de.schumacher_bw.Strava.Util
 
         public override int[] ReadJson(JsonReader reader, Type objectType, int[] existingValue, bool hasExistingValue, JsonSerializer serializer)
         {
+            //if (existingValue == null) return null; //#!JFS!#
+
             if (reader.TokenType == JsonToken.Null) return null;
             var origArray = JArray.Load(reader);
 

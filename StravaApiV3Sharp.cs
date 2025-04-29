@@ -377,6 +377,8 @@ namespace de.schumacher_bw.Strava
                 }
                 else
                 {
+                    if (jsonResponse == null)
+                        throw new Exception($"JSON response is null, status {response.StatusCode}");
                     Fault fault;
                     try
                     {
@@ -434,15 +436,16 @@ namespace de.schumacher_bw.Strava
 
                 //Limit = response.Headers.GetValue("X-Ratelimit-Limit");
                 //Usage = response.Headers.GetValue("X-Ratelimit-Usage");
-
-                foreach(HeaderParameter hp in response.Headers)
+                if (response.Headers != null) //#!JFS!#
                 {
-                    if (hp.Name == "X-Ratelimit-Limit")
-                        Limit = hp.Value.ToString();
-                    if (hp.Name == "X-Ratelimit-Usage")
-                        Usage = hp.Value.ToString();
+                    foreach (HeaderParameter hp in response.Headers)
+                    {
+                        if (hp.Name == "X-Ratelimit-Limit")
+                            Limit = hp.Value.ToString();
+                        if (hp.Name == "X-Ratelimit-Usage")
+                            Usage = hp.Value.ToString();
+                    }
                 }
-
                 /*
                 Limit = response.Headers
                     .Where(x => x.Name == "X-Ratelimit-Limit")

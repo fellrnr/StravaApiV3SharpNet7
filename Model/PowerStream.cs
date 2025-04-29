@@ -6,6 +6,9 @@ using System;
 namespace de.schumacher_bw.Strava.Model
 {
     /// <summary>No comment for this Model existing</summary>
+    /// 
+
+    //#!JFS!# We can get null values back from Strava
     public class PowerStream : IStream
     {
         private PowerStream() {}
@@ -26,14 +29,14 @@ namespace de.schumacher_bw.Strava.Model
         public SeriesType? SeriesType { get; private set; }
 
         /// <summary>The sequence of power values for this stream, in watts</summary>
-        [JsonConverter(typeof(Util.DoubleToIntArrayConverter))]
+        //[JsonConverter(typeof(Util.DoubleToIntArrayConverter))]
         [JsonProperty("data")]
-        public int[] Data 
+        public int?[] Data 
         {
-            get => (int[])_Data?.Clone();
+            get => (int?[])_Data?.Clone();
             private set => _Data = value;
         }
-        private int[] _Data;
+        private int?[] _Data;
 
     }
 }
